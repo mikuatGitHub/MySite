@@ -1,10 +1,10 @@
-import styles from "../styles/post-header.module.css"
+import Image from "next/image"
+
+import styles from "styles/post-header.module.css"
+import ConvertDate from "components/convert-date"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClock } from "@fortawesome/free-regular-svg-icons"
-
-import ConvertDate from "./convert-date"
-import Image from "next/image"
 
 export default function PostHeader({ title, publish= "", eyecatch }) {
   // console.log(title);

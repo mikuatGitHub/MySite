@@ -1,9 +1,7 @@
-import Link from "next/link";
-import { getList } from "../../lib/microcms";
-
-import Container from "../../components/container";
-import Hero from "../../components/hero";
-import Posts from "../../components/posts";
+import { getList } from "lib/microcms";
+import Container from "components/container";
+import Hero from "components/hero";
+import Posts from "components/posts";
 
 export default async function StaticPage() {
   const { contents } = await getList();

@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
 // export default function Home() {
 //   return (
 //     <main className={styles.main}>
@@ -94,12 +91,11 @@ import styles from './page.module.css'
 //   )
 // }
 
-// /index
-import Container from '../components/container'
-import Hero from '../components/hero'
-import { TwoColumn,TwoColumnMain,TwoColumnSide } from '../components/twocolumn'
-import Document from '../components/document'
-import Contact from '../components/contact'
+import Container from 'components/container'
+import Hero from 'components/hero'
+import { TwoColumn,TwoColumnMain,TwoColumnSide } from 'components/twocolumn'
+import Document from 'components/document'
+import Contact from 'components/contact'
 
 export default function Home() {
 

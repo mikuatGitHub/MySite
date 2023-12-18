@@ -11,9 +11,4 @@ const COLORS = {
     }
 }
 
-const EXCERPT = {
-    description: 24,
-    comment: 48
-}
-
-export { EXCERPT, COLORS }
+export { COLORS }

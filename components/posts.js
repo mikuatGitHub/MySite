@@ -1,7 +1,7 @@
-// ブログ投稿一覧
-import styles from '../styles/posts.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
+
+import styles from 'styles/posts.module.css'
 
 export default function Posts({ contents }) {
   return (
@@ -37,20 +37,3 @@ export default function Posts({ contents }) {
   );
 }
 
-        // <article className={styles.post} key={slug}>
-
-        //   <Link href={`/blogs/${post.id}`}>
-        //     <figure>
-        //       <Image
-        //         priority
-        //         src= {eyecatch.url}
-        //         alt=""
-        //         width={eyecatch.width}
-        //         height={eyecatch.height}
-        //         sizes="(min-width:1152px)576px, 50vw"
-        //         style={{ width: "100%", height: "auto" }}
-        //       ></Image>
-        //     </figure>
-
-        //     <h2>{title}</h2>
-        //   </Link>

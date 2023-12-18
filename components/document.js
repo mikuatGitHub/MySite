@@ -1,5 +1,3 @@
-// homeページの文章セクション
-
 import styles from 'styles/document.module.css'
 
 export default function Document() {
