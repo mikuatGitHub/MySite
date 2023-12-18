@@ -1,7 +1,6 @@
 import style from 'styles/works.module.css'
 import Accordion from "components/accordion"
 import Image from 'next/image';
-import pic from 'images/main-bg.jpg';
 
 export default function Works() {
   return (

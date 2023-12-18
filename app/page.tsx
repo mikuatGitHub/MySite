@@ -105,7 +105,7 @@ export default function Home() {
 
   return (
     <Container>
-      <Hero title="HOME" subtitle="ポートフォリオサイト"></Hero>
+      <Hero title="HOME" subtitle="ポートフォリオサイト" imageOn></Hero>
 
       <TwoColumn>
         <TwoColumnMain>

@@ -5,16 +5,11 @@
   margin-top: var(--stack-space, 1rem);
 }
 
-.subtitle{
-  font-size: var(--small-heading2);
-}
 .title{
-  --stack-space: 0.2rem;
+  font-size: var(--heading1);
 }
-.flexBox{
+.dateBox{
+  --stack-space: 0.2rem;
   font-size: var(--small-heading3);
-  display: flex;
-  gap: 0.8rem;
-  align-items: center;
   color: var(--gray-50);
 }

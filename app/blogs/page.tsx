@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { getList } from "../../lib/microcms";
 
+import Container from "../../components/container";
+import Hero from "../../components/hero";
+import Posts from "../../components/posts";
+
 export default async function StaticPage() {
   const { contents } = await getList();
 
@@ -9,16 +13,24 @@ export default async function StaticPage() {
   }
 
   return (
-    <div>
-      <ul>
+    <Container>
+      <Hero title="Blog" subtitle="microCMSと連携したブログ"></Hero>
+
+      {/* <ul>
         {contents.map((post) => {
           return (
-            <li key={post.id}>
-              <Link href={`/blogs/${post.id}`}>{post.title}</Link>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+              <li key={post.id}>
+                <Link href={`/blogs/${post.id}`}>{post.title}</Link>
+              </li>
+              );
+            })}
+      </ul> */}
+      <Posts contents={contents}></Posts>
+
+    </Container>
   );
+}
+
+export const metadata = {
+  title: 'blog',
 }

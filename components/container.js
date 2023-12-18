@@ -1,8 +1,8 @@
-import styles from 'styles/container.module.css'
+import styles from '../styles/container.module.css'
 
-export default function Container({children, large= false}){
+export default function Container({children}){
   return (
-    <div className={large ? styles.large : styles.default}>
+    <div className={styles.container}>
       {children}
     </div>
   )
