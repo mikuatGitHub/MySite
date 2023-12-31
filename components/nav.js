@@ -31,13 +31,13 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link href="/skill" onClick={closeNav}>
-            Skill
+          <Link href="/skills" onClick={closeNav}>
+            Skills
           </Link>
         </li>
         <li>
-          <Link href="/blogs" onClick={closeNav}>
-            Blog
+          <Link href="/blogs/list/1" onClick={closeNav}>
+            Blogs
           </Link>
         </li>
       </ul>

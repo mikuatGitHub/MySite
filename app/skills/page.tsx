@@ -2,11 +2,11 @@
 import Container from "components/container";
 import Hero from "components/hero";
 
-import clientPromise from "lib/mongodb";
 import { MongoClient } from "mongodb";
+import clientPromise from "lib/mongodb";
 import Cards from "components/cards";
 
-export default async function Skill() {
+export default async function Skills() {
 
   // const client = await MongoClient.connect(process.env.MONGODB_URI);
   const client = await clientPromise;
@@ -15,7 +15,7 @@ export default async function Skill() {
 
   return (
     <Container>
-      <Hero title="Skill" subtitle="mongoDBより取得"></Hero>
+      <Hero title="Skills" subtitle="mongoDBより取得"></Hero>
 
       {/* <div className="cards">
         <ul>
@@ -33,6 +33,6 @@ export default async function Skill() {
 }
 
 export const metadata = {
-  title: "skill",
+  title: "skills",
 };
 

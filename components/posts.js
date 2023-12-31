@@ -8,29 +8,29 @@ export default function Posts({ contents }) {
     <div className={styles.stack}>
 
     <ul>
-        {contents.map((post) => {
-          return (
-            <li key={post.id} className={styles.post}>
+    {contents.map((post) => {
+      return (
+        <li key={post.id} className={styles.post}>
 
-            <Link href={`/blogs/${post.id}`}>
+        <Link href={`/blogs/${post.id}`}>
 
-             <figure>
-              <Image
-                 priority
-                 src= {post.eyecatch.url}
-                 alt=""
-                 width={post.eyecatch.width}
-                 height={post.eyecatch.height}
-                 sizes="(min-width:1152px)576px, 50vw"
-                 style={{ width: "100%", height: "auto" }}
-               ></Image>
-              </figure>
+          <figure>
+          <Image
+              priority
+              src= {post.eyecatch.url}
+              alt=""
+              width={post.eyecatch.width}
+              height={post.eyecatch.height}
+              sizes="(min-width:1152px)576px, 50vw"
+              style={{ width: "100%", height: "auto" }}
+            ></Image>
+          </figure>
 
-              <h2>{post.title}</h2>
-              </Link>
-            </li>
-          );
-        })}
+          <h2>{post.title}</h2>
+          </Link>
+        </li>
+      );
+    })}
     </ul>
 
     </div>/* stack */

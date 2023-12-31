@@ -1,0 +1,14 @@
+.pagenation ul{
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.pagenation li{
+  font-size: var(--heading3);
+  background-color: var(--gray-10);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+}

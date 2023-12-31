@@ -7,29 +7,19 @@ import Container from "components/container";
 import PostHeader from "components/post-header";
 import PostBody from "components/post-body";
 
-import {
-  TwoColumn,
-  TwoColumnMain,
-  TwoColumnSide,
-} from "components/twocolumn";
+// export async function generateStaticParams() {
+//   const { contents } = await getList();
+//   const paths = contents.map((post) => {
+//     return {
+//       postId: post.id,
+//     };
+//   });
+//   return [...paths];
+// }
 
-export async function generateStaticParams() {
-  const { contents } = await getList();
-
-  const paths = contents.map((post) => {
-    return {
-      postId: post.id,
-    };
-  });
-
-  return [...paths];
-}
-
-export default async function StaticDetailPage({
-  params: { postId },
-}: {
-  params: { postId: string };
-}) {
+export default async function StaticDetailPage(
+  { params: { postId } }: { params: { postId: string } }) {
+  
   const post = await getDetail(postId);
   // console.log(post)
 
@@ -41,19 +31,11 @@ export default async function StaticDetailPage({
   <Container>
     <PostHeader title={post.title} publish={post.publishedAt} eyecatch={post.eyecatch} />
 
-    <TwoColumn>
-    <TwoColumnMain>
-      <PostBody>
-      <div>{parse(post.content)}</div>
-      </PostBody>
-    </TwoColumnMain>
+    <PostBody>
+    <div>{parse(post.content)}</div>
+    </PostBody>
 
-    <TwoColumnSide>
-      <h5>categories</h5>
-    </TwoColumnSide>
-    </TwoColumn>
-
-    <Link href='./blogs'>BLOGS-TOP</Link>
+    <Link href='/blogs/list/1'>BLOG-TOP</Link>
   </Container>
   );
 }

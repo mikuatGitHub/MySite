@@ -1,18 +1,19 @@
 import { getList } from "lib/microcms";
+
 import Container from "components/container";
 import Hero from "components/hero";
 import Posts from "components/posts";
+import Pagenation from "components/pagenation";
 
-export default async function StaticPage() {
-  const { contents } = await getList();
+export default async function PageId(
+  {params: {pageId}}:{params: {pageId: number}}) {
 
-  if (!contents || contents.length === 0) {
-    return <h1>No contents</h1>;
-  }
+  const { contents, totalCount } = await getList(pageId);
+  // console.log(pageId)
 
   return (
     <Container>
-      <Hero title="Blog" subtitle="microCMSと連携したブログ"></Hero>
+      <Hero title="Blogs" subtitle="microCMSと連携したブログ"></Hero>
 
       {/* <ul>
         {contents.map((post) => {
@@ -23,12 +24,12 @@ export default async function StaticPage() {
               );
             })}
       </ul> */}
-      <Posts contents={contents}></Posts>
-
+      <Posts contents={contents} />
+      <Pagenation totalCount={totalCount} />
     </Container>
   );
 }
 
 export const metadata = {
-  title: 'blog',
-}
+  title: "blogs",
+};
